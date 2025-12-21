@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ReboFlow — AI workflows built for fast-moving startup teams</title>
+  <meta name="description" content="ReboFlow is an AI productivity platform that helps teams plan, write, and ship faster." />
+
+  <!-- Tailwind Play CDN (no install) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .glass { @apply bg-white/10 backdrop-blur border border-white/10; }
+      .shadow-soft { box-shadow: 0 18px 60px rgba(0,0,0,.25); }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <!-- Background -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl"></div>
+    <div class="absolute top-40 right-0 h-[520px] w-[520px] rounded-full bg-cyan-500/15 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 h-[520px] w-[520px] rounded-full bg-fuchsia-500/10 blur-3xl"></div>
+  </div>
+
+  <!-- Nav -->
+  <header class="mx-auto max-w-6xl px-4 sm:px-6">
+    <nav class="flex items-center justify-between py-6">
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 border border-white/10">
+          <span class="text-lg font-black">R</span>
+        </span>
+        <span class="font-semibold tracking-tight">ReboFlow</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm text-slate-200/80">
+        <a class="hover:text-white" href="#features">Features</a>
+        <a class="hover:text-white" href="#proof">Proof</a>
+        <a class="hover:text-white" href="#pricing">Pricing</a>
+        <a class="hover:text-white" href="#faq">FAQ</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#pricing" class="hidden sm:inline-flex rounded-xl px-4 py-2 text-sm font-medium text-slate-200 hover:text-white">
+          Sign in
+        </a>
+        <a href="#cta" class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-slate-200">
+          Get started
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="mx-auto max-w-6xl px-4 sm:px-6">
+    <section class="pt-8 sm:pt-14">
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs text-slate-100/80">
+            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+            New: AI summaries + task extraction
+          </p>
+
+          <h1 class="mt-5 text-4xl font-black tracking-tight sm:text-5xl">
+            AI workflows built for fast-moving startup teams
+  <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-cyan-300"> — 2× faster</span>.
+          </h1>
+
+          <p class="mt-4 text-base leading-relaxed text-slate-200/80 sm:text-lg">
+            ReboFlow turns meetings into tasks, drafts, and plans—automatically.
+          </p>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a href="#cta" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-slate-200">
+              Start free trial
+            </a>
+            <a href="#features" class="inline-flex items-center justify-center rounded-xl glass px-5 py-3 text-sm font-semibold hover:bg-white/10">
+              See how it works
+            </a>
+          </div>
+
+          <div class="mt-6 flex flex-wrap items-center gap-4 text-xs text-slate-200/70">
+            <div class="flex items-center gap-2">
+              <span class="inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/10 border border-white/10">✓</span>
+              No credit card
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/10 border border-white/10">✓</span>
+              Cancel anytime
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/10 border border-white/10">✓</span>
+              Works on mobile
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card -->
+        <div class="relative">
+          <div class="rounded-3xl glass p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold">Weekly Sprint Overview</p>
+                <p class="text-xs text-slate-200/70">Generated from meeting notes</p>
+              </div>
+              <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs text-emerald-200 border border-emerald-400/20">
+                AI Ready
+              </span>
+            </div>
+
+            <div class="mt-6 grid gap-3">
+              <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                <p class="text-xs text-slate-200/70">Summary</p>
+                <p class="mt-1 text-sm leading-relaxed">
+                  Focus on onboarding flow. Reduce steps from 6 → 3. Add “import from CSV” for faster setup.
+                </p>
+              </div>
+
+              <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                <p class="text-xs text-slate-200/70">Auto tasks</p>
+                <ul class="mt-2 space-y-2 text-sm">
+                  <li class="flex items-start gap-2">
+                    <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/10 border border-white/10">1</span>
+                    Draft new onboarding copy + empty states
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/10 border border-white/10">2</span>
+                    Design CSV import modal + error handling
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/10 border border-white/10">3</span>
+                    Set analytics for drop-off points
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex gap-3">
+                <button class="flex-1 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-950 hover:bg-slate-200">
+                  Export plan
+                </button>
+                <button class="flex-1 rounded-xl glass px-4 py-3 text-sm font-semibold hover:bg-white/10">
+                  Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute -bottom-6 -left-6 hidden sm:block rounded-2xl bg-white/5 border border-white/10 p-4">
+            <p class="text-xs text-slate-200/70">Time saved</p>
+            <p class="text-2xl font-black">6.2h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / Proof -->
+    <section id="proof" class="mt-16 sm:mt-20">
+      <p class="text-center text-xs uppercase tracking-[0.25em] text-slate-200/60">Trusted by fast-moving teams</p>
+      <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
+        <div class="rounded-2xl glass px-3 py-4 text-center text-sm font-semibold text-slate-200/80">Orbit</div>
+        <div class="rounded-2xl glass px-3 py-4 text-center text-sm font-semibold text-slate-200/80">Kite</div>
+        <div class="rounded-2xl glass px-3 py-4 text-center text-sm font-semibold text-slate-200/80">Ledgerly</div>
+        <div class="rounded-2xl glass px-3 py-4 text-center text-sm font-semibold text-slate-200/80">Brightco</div>
+        <div class="rounded-2xl glass px-3 py-4 text-center text-sm font-semibold text-slate-200/80">Sable</div>
+        <div class="rounded-2xl glass px-3 py-4 text-center text-sm font-semibold text-slate-200/80">Nimble</div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mt-16 sm:mt-20">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-3xl font-black tracking-tight">Everything you need to look “enterprise”, priced like a startup</h2>
+          <p class="mt-2 text-slate-200/80">
+            Clear sections, strong hierarchy, and conversion-first layout—great for a portfolio.
+          </p>
+        </div>
+        <a href="#pricing" class="inline-flex w-fit rounded-xl glass px-4 py-2 text-sm font-semibold hover:bg-white/10">View pricing</a>
+      </div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <div class="rounded-3xl glass p-6">
+    <p class="text-sm font-semibold">AI Meeting Summaries</p>
+    <p class="mt-2 text-sm text-slate-200/80">
+      Turn messy calls into clean, shareable briefs in seconds.
+    </p>
+  </div>
+
+  <div class="rounded-3xl glass p-6">
+    <p class="text-sm font-semibold">Automatic Task Creation</p>
+    <p class="mt-2 text-sm text-slate-200/80">
+      Extract action items, owners, and due dates automatically.
+    </p>
+  </div>
+
+  <div class="rounded-3xl glass p-6">
+    <p class="text-sm font-semibold">Startup Templates</p>
+    <p class="mt-2 text-sm text-slate-200/80">
+      Reuse sprint plans, PRDs, and launch checklists that scale.
+    </p>
+  </div>
+
+  <div class="rounded-3xl glass p-6">
+    <p class="text-sm font-semibold">Fast Team Alignment</p>
+    <p class="mt-2 text-sm text-slate-200/80">
+      Keep everyone aligned without extra meetings.
+    </p>
+  </div>
+
+  <div class="rounded-3xl glass p-6">
+    <p class="text-sm font-semibold">Secure by Design</p>
+    <p class="mt-2 text-sm text-slate-200/80">
+      Privacy-first defaults built for modern startup teams.
+    </p>
+  </div>
+
+  <div class="rounded-3xl glass p-6">
+    <p class="text-sm font-semibold">Built for Conversion</p>
+    <p class="mt-2 text-sm text-slate-200/80">
+      Clear pricing, proof, and CTAs—ready for real signups.
+    </p>
+  </div>
+</div>
+    </section>
+
+      <!-- Testimonials -->  
+<section class="mt-16 sm:mt-20">
+  <h3 class="text-2xl font-black tracking-tight">Teams feel the difference in week one</h3>
+
+  <div class="mt-6 grid gap-4 lg:grid-cols-3">
+    <figure class="rounded-3xl glass p-6">
+      <blockquote class="text-sm text-slate-200/85">“We cut sprint planning time by ~40% in week one. ReboFlow turns messy notes into an actual plan.”</blockquote>
+      <figcaption class="mt-4 text-xs text-slate-200/60">Mia — Product Manager (Seed-stage)</figcaption>
+    </figure>
+
+    <figure class="rounded-3xl glass p-6">
+      <blockquote class="text-sm text-slate-200/85">“The summaries are instantly shareable, and auto-tasks stop things from slipping. It feels like adding an ops teammate.”</blockquote>
+      <figcaption class="mt-4 text-xs text-slate-200/60">Ken — Founder</figcaption>
+    </figure>
+
+    <figure class="rounded-3xl glass p-6">
+      <blockquote class="text-sm text-slate-200/85">“We went from ‘what did we decide?’ to clear owners and deadlines. Our weekly sync is finally short.”</blockquote>
+      <figcaption class="mt-4 text-xs text-slate-200/60">Aya — Operations Lead</figcaption>
+    </figure>
+  </div>
+</section>
+    <!-- Pricing -->
+    <section id="pricing" class="mt-16 sm:mt-20">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h3 class="text-3xl font-black tracking-tight">Pricing that scales with you</h3>
+          <p class="mt-2 text-slate-200/80">Simple pricing for startup teams at every stage.</p>
+        </div>
+
+        <div class="flex items-center gap-2 rounded-2xl glass p-2 text-sm">
+          <button id="billMonthly" class="rounded-xl px-4 py-2 font-semibold bg-white text-slate-950">Monthly</button>
+          <button id="billYearly" class="rounded-xl px-4 py-2 font-semibold text-slate-200/80 hover:text-white">Yearly <span class="text-emerald-300">(save 20%)</span></button>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-4 lg:grid-cols-3">
+        <div class="rounded-3xl glass p-6">
+          <p class="text-sm font-semibold">Starter</p>
+          <p class="mt-2 text-4xl font-black"><span class="price" data-month="9" data-year="7">$9</span><span class="text-base font-semibold text-slate-200/70">/mo</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-200/80">
+            <li>1 workspace</li>
+            <li>Basic templates</li>
+            <li>Email support</li>
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-950 hover:bg-slate-200">Choose Starter</a>
+        </div>
+
+        <div class="rounded-3xl bg-white text-slate-950 p-6 shadow-soft">
+          <p class="text-sm font-semibold">Pro</p>
+          <p class="mt-2 text-4xl font-black"><span class="price" data-month="19" data-year="15">$19</span><span class="text-base font-semibold text-slate-700/70">/mo</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-800/90">
+            <li>Unlimited workspaces</li>
+            <li>AI summaries + tasks</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-900">Choose Pro</a>
+        </div>
+
+        <div class="rounded-3xl glass p-6">
+          <p class="text-sm font-semibold">Team</p>
+          <p class="mt-2 text-4xl font-black"><span class="price" data-month="39" data-year="31">$39</span><span class="text-base font-semibold text-slate-200/70">/mo</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-200/80">
+            <li>Team permissions</li>
+            <li>Shared libraries</li>
+            <li>Onboarding help</li>
+          </ul>
+          <a href="#cta" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-950 hover:bg-slate-200">Choose Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mt-16 sm:mt-20">
+      <h3 class="text-3xl font-black tracking-tight">FAQ</h3>
+      <p class="mt-2 text-slate-200/80">Quick answers to reduce friction and help teams decide faster.</p>
+
+      <div class="mt-6 grid gap-3">
+        <details class="rounded-2xl glass p-5">
+          <summary class="cursor-pointer text-sm font-semibold">Is this a real product?</summary>
+          <p class="mt-2 text-sm text-slate-200/80">It’s a portfolio concept. That’s okay—clients care about your execution and structure.</p>
+        </details>
+        <details class="rounded-2xl glass p-5">
+          <summary class="cursor-pointer text-sm font-semibold">Can I use this for real clients?</summary>
+          <p class="mt-2 text-sm text-slate-200/80">Yes. Replace the name, copy, and sections with the client’s content.</p>
+        </details>
+        <details class="rounded-2xl glass p-5">
+          <summary class="cursor-pointer text-sm font-semibold">Do I need to install anything?</summary>
+          <p class="mt-2 text-sm text-slate-200/80">No. This is a single-file demo using Tailwind via CDN, so it runs instantly in your browser.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="mt-16 sm:mt-20 mb-16">
+      <div class="rounded-3xl bg-gradient-to-r from-indigo-400/20 to-cyan-400/20 border border-white/10 p-8 sm:p-10">
+        <h3 class="text-3xl font-black tracking-tight">Ready to ship faster with AI?</h3>
+        <p class="mt-2 text-slate-200/85">
+           Try ReboFlow on your next sprint. Turn meetings into tasks, drafts, and clear plans in minutes.
+        </p>
+
+        <form class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <input class="flex-1 rounded-xl bg-slate-950/60 border border-white/10 px-4 py-3 text-sm outline-none focus:border-white/30"
+                 placeholder="Work email (demo)" />
+          <button type="button"
+                  class="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-slate-200">
+            Start free trial
+          </button>
+        </form>
+
+        <p class="mt-3 text-xs text-slate-200/65">Demo form only — no data collected.</p>
+      </div>
+    </section>
+
+    <footer class="pb-10 text-center text-xs text-slate-200/60">
+      © <span id="year"></span> ReboFlow. Portfolio SaaS concept — UI/UX & Frontend by Rebo Jay-ar Estrada.
+    </footer>
+  </main>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Pricing toggle
+    const billMonthly = document.getElementById("billMonthly");
+    const billYearly = document.getElementById("billYearly");
+    const prices = document.querySelectorAll(".price");
+
+    function setBilling(mode) {
+      const isMonthly = mode === "month";
+      billMonthly.className = isMonthly
+        ? "rounded-xl px-4 py-2 font-semibold bg-white text-slate-950"
+        : "rounded-xl px-4 py-2 font-semibold text-slate-200/80 hover:text-white";
+      billYearly.className = !isMonthly
+        ? "rounded-xl px-4 py-2 font-semibold bg-white text-slate-950"
+        : "rounded-xl px-4 py-2 font-semibold text-slate-200/80 hover:text-white";
+
+      prices.forEach((el) => {
+        const v = isMonthly ? el.dataset.month : el.dataset.year;
+        el.textContent = `$${v}`;
+      });
+    }
+
+    billMonthly.addEventListener("click", () => setBilling("month"));
+    billYearly.addEventListener("click", () => setBilling("year"));
+  </script>
+</body>
+</html>
